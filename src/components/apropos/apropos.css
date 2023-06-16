@@ -1,3 +1,61 @@
-
+.section-apropos {
+  background-color: #F1F1F1;
+}
+.section-apropos .apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-apropos .apropos .titre h2 {
+  font-size: 2.5rem;
+}
+.section-apropos .apropos .titre h2 span {
+  color: #5779D0;
+  font-size: 3rem;
+}
+.section-apropos .apropos .sep {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem;
+}
+.section-apropos .apropos .sep .txtapropos p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 350px;
+  margin-bottom: 50px;
+}
+.section-apropos .apropos .sep .txtapropos p span {
+  color: #5779D0;
+  font-weight: bold;
+}
+@media (min-width: 576px) {
+  .section-apropos .apropos .sep .txtapropos p {
+    width: 500px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.section-apropos .apropos .sep .image {
+  background-color: #145478;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.section-apropos .apropos .sep .image img {
+  width: 250px;
+  height: 250px;
+  animation: move 2s infinite alternate;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.3cm);
+  }
+}
 
 /*# sourceMappingURL=apropos.css.map */

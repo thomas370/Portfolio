@@ -2,3 +2,12 @@
 @import 'colors';
 @import 'typos';
 @import '../responsive/responsive';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

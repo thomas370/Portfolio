@@ -1,2 +1,62 @@
 @import '../../assets/scss/colors.scss';
 @import '../../assets/responsive/responsive.scss';
+
+.section-apropos {
+  background-color: $GreyPrimary;
+  .apropos {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+    .titre {
+      h2 {
+        font-size: 2.5rem;
+        span {
+            color: $LightBlue;
+            font-size: 3rem;
+        }
+      }
+    }
+
+    .sep {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding : 2rem;
+      .txtapropos {
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          width: 350px;
+          margin-bottom: 50px;
+          span {
+            color: $LightBlue;
+            font-weight: bold;
+          }
+          @include mobile-large {
+            width: 500px;
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+        }
+      }
+
+        .image {
+          background-color: $MarinBlue;
+          border-radius: 50%;
+          margin-bottom: 50px;
+          img {
+            width: 250px;
+            height: 250px;
+            animation: move 2s infinite alternate;
+            @keyframes move {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(0.3cm); }
+            }
+          }
+        }
+    }
+  }
+}
