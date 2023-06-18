@@ -1,59 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './skills.scss';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+const cardData = [
+    [
+        { title: 'Javascript', logo: './javascript.png', color: '#ecde6f' },
+        { title: 'html 5', logo: './html.png', color: '#f88b6d' },
+        { title: 'css 3', logo: './css.png', color: '#399ae1' },
+        { title: 'react', logo: './react.png', color: '#7bdbf5' },
+        { title: 'sass', logo: './sass.png', color: '#ec9ec6' },
+    ],
+    [
+        { title: 'github', logo: './github.png',color: '#858484' },
+        { title: 'mySQL', logo: './mysql.png', color: '#4479A1' },
+        { title: 'php', logo: './php.png', color: '#777BB4' },
+        { title: 'Symfony', logo: './Symfony.png', color: '#575757' },
+        { title: 'api-platform', logo: './apiplatform.png', color: '#21759B' },
+    ],
+    // Ajoutez d'autres groupes de cartes si nécessaire
+];
 const Skills = () => {
-    const skills = [
-        { name: 'JavaScript', image: './javascript.png', color: '#fae37f' },
-        { name: 'React', image: './react.png', color: '#96E1F9'},
-        { name: 'MySQL', image: './mysql.png', color: '#96E1F9' },
-        { name: 'PHP', image: './php.png' , color: '#145478'},
-        { name: 'Symfony', image: './symfony.png', color: '#424241' },
-        { name: 'HTML', image: './html.png', color: '#96E1F9' },
-        { name: 'CSS', image: './css.png', color: '#96E1F9' },
-        { name: 'SASS', image: './sass.png', color: '#E3A1EE' },
-        { name: 'GitHub', image: './github.png', color: '#96E1F9' },
-
-        // Ajoutez autant de compétences que vous le souhaitez...
-    ];
-
-    // Grouper les compétences par 3 (ou autant que vous voulez par "diapositive")
-    const groupedSkills = [];
-    for (let i = 0; i < skills.length; i += 3) {
-        groupedSkills.push(skills.slice(i, i + 3));
-    }
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const goNext = () => {
-        setCurrentIndex((currentIndex + 1) % groupedSkills.length);
-    };
-
-    const goPrev = () => {
-        setCurrentIndex((currentIndex - 1 + groupedSkills.length) % groupedSkills.length);
-    };
-
     return (
         <div>
-            <section>
+            <section className="section-skills">
                 <div className="skills">
                     <div className="titre">
                         <h2>Skills<span>.</span></h2>
                     </div>
-                    <div className="container">
-                        <button onClick={goPrev}>Précédent</button>
-                        <div className='cards'>
-                            {groupedSkills[currentIndex] && groupedSkills[currentIndex].map(skill => (
-                                <div className="card" key={skill.name} style={{backgroundColor: skill.color}}>
-                                    <img src={skill.image} alt={skill.name} />
-                                    <h3>{skill.name}</h3>
-                                </div>
-                            ))}
-                        </div>
-                        <button onClick={goNext}>Suivant</button>
-                    </div>
+                    <Carousel showThumbs={false} emulateTouch showStatus={false} showIndicators={true}>
+                        {cardData.map((group, index) => (
+                            <div className="container" key={index}>
+                                {group.map((card, index) => (
+                                    <div className="card" key={index} style={{ backgroundColor: card.color }}>
+                                        <img src={card.logo} alt={card.title} /> {/* Ajout de l'image ici */}
+                                        <h3>{card.title}</h3>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </Carousel>
                 </div>
             </section>
         </div>
     );
 };
+
 export default Skills;

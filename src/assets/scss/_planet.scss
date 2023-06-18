@@ -23,7 +23,7 @@
   &.planet-2 {
     top: 20vh;
     left: 75vw;
-    animation: orbit 3s infinite alternate;
+    animation: orbit 15s infinite alternate;
   }
 
   &.planet-3 {
@@ -39,7 +39,20 @@
     left: 80vw;
   }
 
+  &.planet-5 {
+    Width: 10%;
+    top: 150vh;
+    left: 5vw;
+    animation: move 5s infinite alternate;
+  }
 
+  &.planet-6 {
+    z-index: 100;
+    Width: 15%;
+    top: 199vh;
+    left: 82vw;
+    animation: orbit 5s infinite alternate;
+  }
   @include less-than-tablet-large {
     display: none;
   }

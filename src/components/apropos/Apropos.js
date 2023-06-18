@@ -17,7 +17,6 @@ const Apropos = () => {
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
     );

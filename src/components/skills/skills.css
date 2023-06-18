@@ -1,49 +1,46 @@
-section .skills .titre h2 {
+.section-skills .skills .titre {
   text-align: center;
+}
+.section-skills .skills .titre h2 {
   font-size: 2.5rem;
 }
-section .skills .titre h2 span {
+.section-skills .skills .titre h2 span {
   color: #5779D0;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
-section .skills .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-section .skills .container button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-section .skills .container button:hover {
-  background-color: #2980b9;
-}
-section .skills .container .cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.section-skills .skills .carousel .slide {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
   margin: 20px;
 }
-section .skills .container .cards .card {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: #5779D0;
+.section-skills .skills .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 }
-section .skills .container .cards .card img {
-  width: 100%;
-  height: 60%;
-  margin: 10px 20px 0 0;
+.section-skills .skills .container .card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
 }
-section .skills .container .cards .card h3 {
-  text-align: center;
+.section-skills .skills .container .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.section-skills .skills .container .card img {
+  width: 150px;
+  height: 100%;
+}
+.section-skills .skills .container .card h3 {
+  color: white;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=skills.css.map */

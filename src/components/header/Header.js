@@ -15,6 +15,12 @@ const Header = () => {
             <div className="planet planet-4">
                 <img src="./planete_4.png" alt="planete_4"/>
             </div>
+            <div className="planet planet-5">
+                <img src="./planete_5.png" alt="planete_5"/>
+            </div>
+            <div className="planet planet-6">
+                <img src="./planete_6.png" alt="planete_6"/>
+            </div>
             <header>
                 <div className="logo">
                     <img src="./logo_thomas.png" alt="Logo" />

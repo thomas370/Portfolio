@@ -1,2 +1,22 @@
 @import '../../assets/scss/colors.scss';
 @import '../../assets/responsive/responsive.scss';
+
+.section-projet {
+  background-color: $GreyPrimary;
+  .projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .titre {
+      h2 {
+        font-size: 2.5rem;
+        span {
+          color: $LightBlue;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+

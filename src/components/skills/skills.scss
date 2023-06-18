@@ -1,60 +1,53 @@
 @import '../../assets/scss/colors.scss';
 @import '../../assets/responsive/responsive.scss';
 
-section{
-  .skills{
-    .titre{
-      h2{
-        text-align: center;
+.section-skills {
+  .skills {
+    .titre {
+      text-align: center;
+      h2 {
         font-size: 2.5rem;
-        span{
+        span {
           color: $LightBlue;
-          font-size: 2.5rem;
+          font-size: 3rem;
         }
       }
     }
+
+    .carousel .slide {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+    }
+
     .container {
-      display: flex;
+      display : flex;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      button {
-        margin: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
+      cursor: pointer;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      .card {
+        padding: 20px;
+        border: 1px solid #ddd; // Bordure de la carte
+        border-radius: 10px; // Coins arrondis de la carte
+        background: #fff; // Couleur de fond de la carte
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); // Ombre portée de la carte
+        transition: transform 0.5s;
         &:hover {
-          background-color: #2980b9;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Ombre portée de la carte
+          transform: scale(1.1);
         }
-      }
-
-      .cards {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 20px;
-
-        .card {
-          width: 200px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 5px;
-          background-color: #5779D0;
-
-          img {
-            width: 100%;
-            height: 60%;
-            margin: 10px 20px 0 0;
-          }
-
-          h3 {
-            text-align: center;
-          }
+        img{
+          width: 150px;
+          height: 100%;
         }
+        h3 {
+          color: #ffff;
+          margin-bottom: 10px;
+        }
+
       }
     }
   }
