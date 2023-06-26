@@ -1,5 +1,6 @@
-@import '../../assets/scss/colors.scss';
-@import '../../assets/responsive/responsive.scss';
+@import '../../assets/scss/_colors.scss';
+@import '../../assets/responsive/_responsive.scss';
+@import '../../assets/scss/_typos.scss';
 
 .section-apropos {
   background-color: $GreyPrimary;
@@ -11,6 +12,7 @@
     .titre {
       h2 {
         font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
         span {
             color: $LightBlue;
             font-size: 3rem;
@@ -19,31 +21,39 @@
     }
 
     .sep {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        padding : 2rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding : 2rem;
+
       .txtapropos {
         p {
           font-size: 1rem;
           line-height: 1.5rem;
-          width: 350px;
-          margin-bottom: 50px;
+          width: 100%;
+          max-width: 350px;
+          flex-wrap: wrap;
+          font-family: 'Roboto', sans-serif;
+          margin: 20px;
+
           span {
             color: $LightBlue;
             font-weight: bold;
           }
+
           @include mobile-large {
-            width: 500px;
+            max-width: 500px;
             font-size: 1.5rem;
             line-height: 2rem;
+            margin: 10px;
           }
         }
       }
 
-        .image {
+
+      .image {
           background-color: $MarinBlue;
           border-radius: 50%;
           margin-bottom: 50px;

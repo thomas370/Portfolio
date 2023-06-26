@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .planet {
   position: absolute;
   width: 20vw;
@@ -24,7 +25,7 @@
   Width: 30%;
   top: 75vh;
   left: 10vw;
-  animation: orbit 5s infinite alternate;
+  animation: orbit 15s infinite alternate;
 }
 .planet.planet-4 {
   Width: 10%;
@@ -43,6 +44,12 @@
   top: 199vh;
   left: 82vw;
   animation: orbit 5s infinite alternate;
+}
+.planet.planet-7 {
+  Width: 10%;
+  top: 285vh;
+  left: 5vw;
+  animation: move 5s infinite alternate;
 }
 @media (max-width: 959px) {
   .planet {
@@ -121,6 +128,7 @@ Header .text h1 {
   font-size: 2.5rem;
   color: #FFFFFF;
   margin: 0 0 1rem 0;
+  font-family: "Roboto", sans-serif;
 }
 Header .text h1 span {
   color: #5779D0;
@@ -128,6 +136,7 @@ Header .text h1 span {
 Header .text p {
   color: #FFFFFF;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 Header .buttons {
   margin-top: 2rem;
@@ -141,9 +150,13 @@ Header .buttons button:first-child {
   border: none;
   border-radius: 5px;
   background-color: #5779D0;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 1rem;
   cursor: pointer;
+}
+Header .buttons button:first-child a {
+  text-decoration: none;
+  color: #000000;
 }
 Header .buttons button {
   margin: 0 1rem;
@@ -154,6 +167,61 @@ Header .buttons button {
   color: #5779D0;
   font-size: 1rem;
   cursor: pointer;
+}
+Header .buttons button a {
+  text-decoration: none;
+  color: #000000;
+}
+Header .scrollcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+Header .scrollcenter .scroll {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  z-index: 80;
+  bottom: 25px;
+  position: absolute;
+  border-width: 0 0.25em 0.25em 0;
+  border-style: solid;
+  border-color: #1e1d1d;
+  animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+}
+Header .scrollcenter .scroll2 {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  z-index: 80;
+  bottom: 40px;
+  position: absolute;
+  border-width: 0 0.25em 0.25em 0;
+  border-style: solid;
+  border-color: #1e1d1d;
+  animation: scrolldown 1.2s ease-in-out infinite;
+}
+Header .scrollcenter .scroll, Header .scrollcenter .scroll2 {
+  left: 50%;
+  transform: translateY(0%) rotate(45deg);
+  opacity: 0;
+}
+@keyframes scrolldown {
+  0% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

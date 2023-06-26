@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.scss';
+
 const Header = () => {
     return (
         <div>
@@ -21,7 +22,10 @@ const Header = () => {
             <div className="planet planet-6">
                 <img src="./planete_6.png" alt="planete_6"/>
             </div>
-            <header>
+            <div className="planet planet-7">
+                <img src="./planete_7.png" alt="planete_7"/>
+            </div>
+            <header id="Home">
                 <div className="logo">
                     <img src="./logo_thomas.png" alt="Logo" />
                 </div>
@@ -30,8 +34,14 @@ const Header = () => {
                     <p>Développeur web full-stack</p>
                 </div>
                 <div className="buttons">
-                    <button>Mon CV</button>
-                    <button>Me contacter</button>
+                    {/*quand ont click sa telecharge le cv*/}
+                   <button> <a href="./CV.pdf" download="CV.pdf">Télécharger mon CV</a></button>
+                    {/*quand ont click sa scroll vers le bas*/}
+                    <button><a href="#Contact">Me contacter</a></button>
+                </div>
+                <div className="scrollcenter">
+                    <div className="scroll"></div>
+                    <div className="scroll2"></div>
                 </div>
             </header>
         </div>

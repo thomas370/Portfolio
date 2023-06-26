@@ -1,15 +1,24 @@
-@import '../../assets/scss/colors.scss';
-@import '../../assets/responsive/responsive.scss';
+@import '../../assets/scss/_colors.scss';
+@import '../../assets/responsive/_responsive.scss';
+@import '../../assets/scss/_typos.scss';
 
 .section-skills {
   .skills {
     .titre {
       text-align: center;
+
       h2 {
         font-size: 2.5rem;
+        font-family: "Roboto", sans-serif;
+
         span {
           color: $LightBlue;
           font-size: 3rem;
+
+          // Réduire la taille de la police pour les petits écrans
+          @include less-than-tablet-large {
+            font-size: 2.5rem;
+          }
         }
       }
     }
@@ -20,7 +29,6 @@
       padding: 20px;
       margin: 20px;
     }
-
     .container {
       display : flex;
       justify-content: space-around;
@@ -28,26 +36,41 @@
       cursor: pointer;
       flex-wrap: wrap;
       margin-bottom: 50px;
+      a{
+        text-decoration: none;
+      }
       .card {
         padding: 20px;
-        border: 1px solid #ddd; // Bordure de la carte
-        border-radius: 10px; // Coins arrondis de la carte
-        background: #fff; // Couleur de fond de la carte
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1); // Ombre portée de la carte
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         transition: transform 0.5s;
+
         &:hover {
-          box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Ombre portée de la carte
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2);
           transform: scale(1.1);
         }
-        img{
+
+        img {
           width: 150px;
           height: 100%;
+          // Modifier la taille de l'image pour les petits écrans
+          @include less-than-tablet-large {
+            width: 100px;
+          }
         }
+
         h3 {
           color: #ffff;
           margin-bottom: 10px;
-        }
+          font-family: "Roboto", sans-serif;
 
+          // Modifier la taille de la police pour les petits écrans
+          @include less-than-tablet-large {
+            font-size: 1.5rem;
+          }
+        }
       }
     }
   }

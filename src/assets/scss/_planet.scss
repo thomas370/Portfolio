@@ -30,7 +30,7 @@
     Width: 30%;
     top: 75vh;
     left: 10vw;
-    animation: orbit 5s infinite alternate;
+    animation: orbit 15s infinite alternate;
   }
 
   &.planet-4 {
@@ -53,6 +53,14 @@
     left: 82vw;
     animation: orbit 5s infinite alternate;
   }
+
+  &.planet-7 {
+    Width: 10%;
+    top: 285vh;
+    left: 5vw;
+    animation: move 5s infinite alternate;
+  }
+
   @include less-than-tablet-large {
     display: none;
   }

@@ -1,2 +1,101 @@
-@import '../../assets/scss/colors.scss';
-@import '../../assets/responsive/responsive.scss';
+@import '../../assets/scss/_colors.scss';
+@import '../../assets/responsive/_responsive.scss';
+
+.footer-container {
+  background-color: $MarinBlue;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles pour le pied de page
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Styles pour le texte du pied de page
+.footer-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+// Styles pour les icônes des médias sociaux
+.footer-icons {
+  .icon {
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #a1a1a1;
+    }
+  }
+}
+
+// Styles pour la navigation du pied de page
+.footer-nav {
+  ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    li {
+      margin: 5px 0;
+      cursor: pointer;
+      a {
+        color: #fff;
+        transition: color 0.3s ease;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Styles pour le copyright
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+// Styles pour les tablettes et plus grand
+@include tablet {
+  .footer-nav {
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .footer {
+    flex-direction: Column;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-nav, .footer-icons, .footer-text {
+      margin: 0;
+    }
+  }
+}
+
+// Styles pour les ordinateurs de bureau et plus grand
+@include desktop {
+  .footer-text {
+    font-size: 1.8em;
+  }
+
+  .footer-icons .icon {
+    margin: 0 15px;
+  }
+
+  .footer-nav ul li {
+    margin: 0 15px;
+  }
+}

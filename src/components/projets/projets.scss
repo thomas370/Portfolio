@@ -1,22 +1,81 @@
-@import '../../assets/scss/colors.scss';
-@import '../../assets/responsive/responsive.scss';
+@import '../../assets/scss/_colors.scss';
+@import '../../assets/responsive/_responsive.scss';
+@import '../../assets/scss/_typos.scss';
 
 .section-projet {
   background-color: $GreyPrimary;
+  padding:  0 0 50px 0;
   .projet {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .titre {
       h2 {
         font-size: 2.5rem;
+        font-family: "Roboto", sans-serif;
+
         span {
           color: $LightBlue;
           font-size: 3rem;
         }
       }
     }
+
+    .filtre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+
+      button {
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $white;
+        color: $LightBlue;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Ombre portée de la carte
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .container-global {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .flipper-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a{
+      text-decoration: none;
+      text-decoration: $black;
+    }
+
+    .card {
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ddd; // Bordure de la carte
+      border-radius: 10px; // Coins arrondis de la carte
+      background: #fff; // Couleur de fond de la carte
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1); // Ombre portée de la carte
+      transition: transform 0.5s;
+
+      &:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2); // Ombre portée de la carte
+        transform: scale(1.05);
+      }
+    }
   }
 }
-

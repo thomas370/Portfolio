@@ -1,4 +1,5 @@
 @import '../../assets/scss/_colors.scss';
+@import '../../assets/scss/_typos.scss';
 @import '../../assets/responsive/_responsive.scss';
 @import '../../assets/scss/_planet.scss';
 
@@ -22,6 +23,7 @@ Header{
       font-size: 2.5rem;
       color: $white;
       margin: 0 0 1rem 0;
+      font-family: 'Roboto', sans-serif;
       span{
         color: $LightBlue;
       }
@@ -29,6 +31,7 @@ Header{
     p{
       color: $white;
       margin: 0;
+      font-family: 'Roboto', sans-serif;
     }
   }
   .buttons{
@@ -42,9 +45,13 @@ Header{
       border: none;
       border-radius: 5px;
       background-color: $LightBlue;
-      color: $white;
+      color: $black;
       font-size: 1rem;
       cursor: pointer;
+      a{
+        text-decoration: none;
+        color: $black;
+      }
     }
     button{
         margin: 0 1rem;
@@ -55,6 +62,43 @@ Header{
         color: $LightBlue;
         font-size: 1rem;
         cursor: pointer;
+      a{
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+  .scrollcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    .scroll{
+      width: 2em; height: 2em; background-color: transparent; z-index: 80;
+      bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #1e1d1d; animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+    }
+    .scroll2{
+      width: 2em; height: 2em; background-color: transparent; z-index: 80;
+      bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #1e1d1d; animation: scrolldown 1.2s ease-in-out infinite;
+    }
+    .scroll, .scroll2{
+      left: 50%; transform: translateY(0%) rotate(45deg); opacity: 0;
+    }
+    @keyframes scrolldown {
+      0%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+      }
+      50%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0.2;
+      }
+      100%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+      }
     }
   }
 }

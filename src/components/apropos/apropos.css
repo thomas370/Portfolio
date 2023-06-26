@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .section-apropos {
   background-color: #F1F1F1;
 }
@@ -9,6 +10,7 @@
 }
 .section-apropos .apropos .titre h2 {
   font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
 }
 .section-apropos .apropos .titre h2 span {
   color: #5779D0;
@@ -25,8 +27,11 @@
 .section-apropos .apropos .sep .txtapropos p {
   font-size: 1rem;
   line-height: 1.5rem;
-  width: 350px;
-  margin-bottom: 50px;
+  width: 100%;
+  max-width: 350px;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
 .section-apropos .apropos .sep .txtapropos p span {
   color: #5779D0;
@@ -34,9 +39,10 @@
 }
 @media (min-width: 576px) {
   .section-apropos .apropos .sep .txtapropos p {
-    width: 500px;
+    max-width: 500px;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin: 10px;
   }
 }
 .section-apropos .apropos .sep .image {
