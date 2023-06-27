@@ -150,13 +150,13 @@ Header .buttons button:first-child {
   border: none;
   border-radius: 5px;
   background-color: #5779D0;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 1rem;
   cursor: pointer;
 }
 Header .buttons button:first-child a {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 Header .buttons button {
   margin: 0 1rem;
@@ -164,13 +164,12 @@ Header .buttons button {
   border: none;
   border-radius: 5px;
   background-color: #FFFFFF;
-  color: #5779D0;
   font-size: 1rem;
   cursor: pointer;
 }
 Header .buttons button a {
   text-decoration: none;
-  color: #000000;
+  color: #5779D0;
 }
 Header .scrollcenter {
   display: flex;
@@ -178,7 +177,7 @@ Header .scrollcenter {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 Header .scrollcenter .scroll {
   width: 2em;
@@ -189,7 +188,7 @@ Header .scrollcenter .scroll {
   position: absolute;
   border-width: 0 0.25em 0.25em 0;
   border-style: solid;
-  border-color: #1e1d1d;
+  border-color: #e5e1e1;
   animation: scrolldown 1.2s ease-in-out infinite 0.15s;
 }
 Header .scrollcenter .scroll2 {
@@ -201,11 +200,10 @@ Header .scrollcenter .scroll2 {
   position: absolute;
   border-width: 0 0.25em 0.25em 0;
   border-style: solid;
-  border-color: #1e1d1d;
+  border-color: #e5e1e1;
   animation: scrolldown 1.2s ease-in-out infinite;
 }
 Header .scrollcenter .scroll, Header .scrollcenter .scroll2 {
-  left: 50%;
   transform: translateY(0%) rotate(45deg);
   opacity: 0;
 }

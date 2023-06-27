@@ -2,6 +2,15 @@ import React from 'react';
 import './header.scss';
 
 const Header = () => {
+    const scrollTo = (e) => {
+        e.preventDefault();
+        const href = e.target.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
     return (
         <div>
             <div className="planet planet-1">
@@ -37,11 +46,11 @@ const Header = () => {
                     {/*quand ont click sa telecharge le cv*/}
                    <button> <a href="./CV.pdf" download="CV.pdf">Télécharger mon CV</a></button>
                     {/*quand ont click sa scroll vers le bas*/}
-                    <button><a href="#Contact">Me contacter</a></button>
+                    <button><a href="#Contact" onClick={scrollTo}>Me contacter</a></button>
                 </div>
-                <div className="scrollcenter">
-                    <div className="scroll"></div>
-                    <div className="scroll2"></div>
+                <div className="scrollcenter" onClick={() => window.scrollTo({ top: 900, behavior: 'smooth' })}>
+                    <div className="scroll" onClick={() => window.scrollTo({ top: 900, behavior: 'smooth' })}></div>
+                    <div className="scroll2" onClick={() => window.scrollTo({ top: 900, behavior: 'smooth' })}></div>
                 </div>
             </header>
         </div>

@@ -45,12 +45,12 @@ Header{
       border: none;
       border-radius: 5px;
       background-color: $LightBlue;
-      color: $black;
+      color: $white;
       font-size: 1rem;
       cursor: pointer;
       a{
         text-decoration: none;
-        color: $black;
+        color: $white;
       }
     }
     button{
@@ -59,12 +59,11 @@ Header{
         border: none;
         border-radius: 5px;
         background-color: $white;
-        color: $LightBlue;
         font-size: 1rem;
         cursor: pointer;
       a{
         text-decoration: none;
-        color: $black;
+        color: $LightBlue;
       }
     }
   }
@@ -74,17 +73,17 @@ Header{
     align-items: center;
     flex-direction: column;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     .scroll{
       width: 2em; height: 2em; background-color: transparent; z-index: 80;
-      bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #1e1d1d; animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+      bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #e5e1e1; animation: scrolldown 1.2s ease-in-out infinite 0.15s;
     }
     .scroll2{
       width: 2em; height: 2em; background-color: transparent; z-index: 80;
-      bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #1e1d1d; animation: scrolldown 1.2s ease-in-out infinite;
+      bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #e5e1e1; animation: scrolldown 1.2s ease-in-out infinite;
     }
     .scroll, .scroll2{
-      left: 50%; transform: translateY(0%) rotate(45deg); opacity: 0;
+      transform: translateY(0%) rotate(45deg); opacity: 0;
     }
     @keyframes scrolldown {
       0%{

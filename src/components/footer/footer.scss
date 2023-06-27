@@ -1,4 +1,5 @@
 @import '../../assets/scss/_colors.scss';
+@import '../../assets/scss/_typos.scss';
 @import '../../assets/responsive/_responsive.scss';
 
 .footer-container {
@@ -9,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 
 // Styles pour le pied de page

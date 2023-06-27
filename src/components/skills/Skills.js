@@ -28,7 +28,8 @@ const Skills = () => {
                     <div className="titre">
                         <h2>Compétences<span>.</span></h2>
                     </div>
-                    <Carousel showThumbs={false} emulateTouch showStatus={false} showIndicators={true} verticalSwipe={"natural"} centerSlidePercentage={100} centerMode={true} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000} stopOnHover={false} swipeable={true} dynamicHeight={true} >
+                    <Carousel showThumbs={false} emulateTouch showStatus={false} showIndicators={true} verticalSwipe={"natural"}  autoPlay={true}
+                        infiniteLoop={true} interval={3000} transitionTime={500} stopOnHover={false} swipeable={true}  >
                         {cardData.map((group, index) => (
                             <div className="container" key={index}>
                                 {group.map((card, index) => (
